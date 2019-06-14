@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = 4000;
 
-let client = redis.createClient();
+let client = redis.createClient(process.env.REDIS_URL);
 client.on('connect', function() {
     console.log('Connected to Redis...')
 });
