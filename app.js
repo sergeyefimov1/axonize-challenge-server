@@ -2,7 +2,7 @@ const express = require('express');
 const redis = require('redis');
 const bodyParser = require('body-parser');
 const app = express();
-const PORT = 4000;
+$PORT = 4000;
 
 let client = redis.createClient(process.env.REDIS_URL);
 client.on('connect', function() {
@@ -36,8 +36,8 @@ app.post('/api/new_message', function(req, res) {
     });
 });
 
-app.listen(PORT, () => {
-    console.log('Server is running on PORT:',PORT);
+app.listen($PORT, () => {
+    console.log('Server is running on PORT:',$PORT);
 });
 
 module.exports = app;
